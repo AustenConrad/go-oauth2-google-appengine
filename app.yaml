@@ -1,0 +1,11 @@
+application: goauth2appengine
+version: 1
+runtime: go
+api_version: go1
+
+handlers:
+
+# All other routes. IMPORTANT: This should always be the last route listed.
+- url: /.*
+  script: _go_app
+  login: optional
